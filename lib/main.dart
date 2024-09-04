@@ -11,6 +11,10 @@ var kDarkColorScheme = ColorScheme.fromSeed(
   seedColor: const Color.fromARGB(255, 37, 69, 69),
 );
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  // ]).then((fn) { //this thing is actually to lock the app to developer preference orientation
   runApp(
     MaterialApp(
       darkTheme: ThemeData.dark().copyWith(
@@ -31,7 +35,7 @@ void main() {
       ),
       theme: ThemeData().copyWith(
         colorScheme: kColorScheme,
-        appBarTheme: AppBarTheme().copyWith(
+        appBarTheme: const AppBarTheme().copyWith(
           backgroundColor: kColorScheme.onPrimaryContainer,
           foregroundColor: kColorScheme.primaryContainer,
         ),
@@ -59,4 +63,5 @@ void main() {
       home: const Expenses(),
     ),
   );
+  //});
 }
